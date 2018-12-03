@@ -1,9 +1,10 @@
 import React from 'react';
-class Fancy extends React.Component {
+
+class AddToHomescreen extends React.Component {
   render() {
     return (
-      <div>This is so Fancy!</div>
+      <div>This is so!</div>
     );
   }
 }
-export default Fancy;
+export default AddToHomescreen;

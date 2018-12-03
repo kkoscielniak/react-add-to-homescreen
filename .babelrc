@@ -1,9 +1,23 @@
 {
-    "presets": [
-        "env", "react"
-    ],
-    "plugins": [
-        "transform-object-rest-spread",
-        "transform-react-jsx"
-    ]
+  "presets": [
+    "env",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-export-extensions"
+      ],
+      "only": [
+        "./**/*.js",
+        "node_modules/jest-runtime"
+      ]
+    }
+  }
 }

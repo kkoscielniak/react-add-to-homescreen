@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "install": "npm run build",
-    "lint": "semistandard",
+    "lint": "npx eslint webpack.config.* src --color",
     "start": "webpack --watch",
     "test": "jest"
   },
@@ -46,6 +46,8 @@
     "chai": "^4.2.0",
     "chai-enzyme": "^1.0.0-beta.1",
     "enzyme": "^3.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-brainhub": "^1.9.2",
     "husky": "^1.2.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",

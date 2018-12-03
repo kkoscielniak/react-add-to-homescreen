@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "install": "npm run build",
+    "lint": "semistandard",
     "start": "webpack --watch",
     "test": "jest"
   },
@@ -45,9 +46,11 @@
     "chai": "^4.2.0",
     "chai-enzyme": "^1.0.0-beta.1",
     "enzyme": "^3.7.0",
+    "husky": "^1.2.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "react-dom": "^16.6.3",
+    "semistandard": "^13.0.1",
     "webpack-cli": "^3.1.2"
   },
   "jest": {
@@ -57,5 +60,10 @@
     "setupFiles": [
       "./src/setupTests.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   }
 }

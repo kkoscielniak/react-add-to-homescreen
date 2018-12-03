@@ -1,3 +1,4 @@
+/* global describe it expect */
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -9,5 +10,5 @@ describe('AddToHomescreen Component', () => {
     expect(wrapper).toMatchSnapshot();
 
     done();
-  })
+  });
 });

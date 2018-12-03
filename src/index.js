@@ -1,7 +1,7 @@
 import React from 'react';
 
 class AddToHomescreen extends React.Component {
-  render() {
+  render () {
     return (
       <div>This is so!</div>
     );

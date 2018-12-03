@@ -1,0 +1,43 @@
+{
+  "name": "react-add-to-homescreen",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "webpack",
+    "install": "npm run build",
+    "start": "webpack --watch",
+    "test": "npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkoscielniak/react-add-to-homescreen.git"
+  },
+  "keywords": [
+    "react",
+    "homescreen",
+    "pwa",
+    "ios",
+    "android"
+  ],
+  "author": "Krystian Kościelniak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkoscielniak/react-add-to-homescreen/issues"
+  },
+  "homepage": "https://github.com/kkoscielniak/react-add-to-homescreen#readme",
+  "dependencies": {
+    "react": "^16.6.3",
+    "webpack": "^4.26.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

@@ -10,7 +10,7 @@ class AddToHomescreen extends React.Component {
       <div>
         {isRunningOnIos ? (
           <div className="add-to-home-banner">
-            OMG, this is so iOS!
+              OMG, this is so iOS!
           </div>
         ) : null}
       </div>

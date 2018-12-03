@@ -5,7 +5,6 @@
   "main": "build/index.js",
   "scripts": {
     "build": "webpack",
-    "install": "npm run build",
     "lint": "npx eslint webpack.config.* src --color",
     "start": "webpack --watch",
     "test": "jest"

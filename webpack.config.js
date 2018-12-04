@@ -17,14 +17,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js*$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|build)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['react', 'env'],
-          },
         },
       },
       {

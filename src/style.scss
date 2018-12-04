@@ -1,12 +1,23 @@
 .add-to-home-banner {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   background: white;
   color: black;
+  text-align: left;
 
   .add-to-home-text {
     display: inline-block;
     padding: 10px;
+    font-size: 16px;
+  }
+
+  .add-to-home-close-btn {
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    right: 4px;
+    float: right;
+    font-size: 32px;
   }
 }

@@ -31,13 +31,13 @@ jobs:
           - v1-dependencies-
       - run:
           name: Run tests
-          command: yarn test
+          command: yarn test --coverage
       - run:
           name: Generate coveralls config
           command: "echo repo_token: $COVERALLS_REPO_TOKEN > ./.coveralls.yml"
       - run:
           name: Upload coverage to coveralls
-          command: cat ./coverage/lcov.info | coveralls
+          command: cat ./coverage/lcov.info | npx coveralls
       - save_cache:
           paths:
             - node_modules

@@ -1,4 +1,5 @@
 # react-add-to-homescreen
+[![CircleCI](https://circleci.com/gh/kkoscielniak/react-add-to-homescreen/tree/master.svg?style=svg)](https://circleci.com/gh/kkoscielniak/react-add-to-homescreen/tree/master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Coverage Status](https://coveralls.io/repos/github/kkoscielniak/react-add-to-homescreen/badge.svg?branch=master)](https://coveralls.io/github/kkoscielniak/react-add-to-homescreen?branch=master)
 
 Bringing your PWA app to iOS. Evidently.
 

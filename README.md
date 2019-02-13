@@ -12,8 +12,11 @@ Bringing your PWA app to iOS. Evidently.
 $ yarn react-add-to-homescreen
 ```
 
+## Demo
+You can check out the demo Progressive Web App [here](https://pills-pwa.netlify.com/). I am not the designer of this one though 😎
+
 ## Usage
-`react-add-to-homescreen` usage is designed to be as simple as possible. First import the component:
+`react-add-to-homescreen` is designed to be as simple as possible. First import the component:
 ```javascript
 import AddToHomescreen from 'react-add-to-homescreen';
 ```
@@ -39,5 +42,4 @@ handleAddToHomescreenClick = () => {
 If you have comments, complaints, or ideas for improvements, feel free to open an issue or a pull request! If you are using or intend to use `react-add-to-homescreen`, please let me know 🙂
 
 ## License
-Author and license
 `react-add-to-homescreen` was created by [@kkoscielniak](https://github.com/kkoscielniak). It is available under the MIT license. See the LICENSE file for more info.

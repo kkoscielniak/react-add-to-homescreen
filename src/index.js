@@ -29,11 +29,7 @@ class AddToHomescreen extends React.Component {
         {shouldRender ? (
           <div className="add-to-home-banner">
             <div className="add-to-home-text">
-              <a
-                onClick={this.onAddToHomescreenClick}
-              >
-                Add to home screen
-              </a>
+              <a onClick={this.onAddToHomescreenClick}>Add to home screen</a>
             </div>
             <MdClose
               className="add-to-home-close-btn"

@@ -10,10 +10,7 @@ describe('AddToHomescreen Component', () => {
     navigator.__defineGetter__('userAgent', () => 'iPhone');
 
     const wrapper = shallow(<AddToHomescreen />);
-    assert.strictEqual(
-      wrapper.exists('.add-to-home-banner'),
-      true
-    );
+    assert.strictEqual(wrapper.exists('.add-to-home-banner'), true);
 
     done();
   });
@@ -22,10 +19,7 @@ describe('AddToHomescreen Component', () => {
     navigator.__defineGetter__('userAgent', () => 'android');
 
     const wrapper = shallow(<AddToHomescreen />);
-    assert.strictEqual(
-      wrapper.exists('.add-to-home-banner'),
-      false
-    );
+    assert.strictEqual(wrapper.exists('.add-to-home-banner'), false);
 
     done();
   });
@@ -36,7 +30,7 @@ describe('AddToHomescreen Component', () => {
     const mockFunction = jest.fn();
 
     const wrapper = shallow(
-      <AddToHomescreen onAddToHomescreenClick={mockFunction} />
+      <AddToHomescreen onAddToHomescreenClick={mockFunction} />,
     );
 
     wrapper.find('.add-to-home-text a').simulate('click');
@@ -51,10 +45,7 @@ describe('AddToHomescreen Component', () => {
 
     wrapper.find('.add-to-home-close-btn').simulate('click');
 
-    assert.strictEqual(
-      wrapper.exists('.add-to-home-banner'),
-      false
-    );
+    assert.strictEqual(wrapper.exists('.add-to-home-banner'), false);
 
     done();
   });

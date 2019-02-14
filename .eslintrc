@@ -1,7 +1,8 @@
 {
   "root": true,
   "extends": [
-    "brainhub"
+    "brainhub",
+    "prettier"
   ],
   "settings": {
     "import/resolve": {

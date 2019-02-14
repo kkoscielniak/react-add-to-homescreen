@@ -44,4 +44,18 @@ describe('AddToHomescreen Component', () => {
 
     done();
   });
+
+  it('should hide the Component on clise button click', done => {
+    const wrapper = shallow(<AddToHomescreen />);
+    assert.strictEqual(wrapper.exists('.add-to-home-banner'), true);
+
+    wrapper.find('.add-to-home-close-btn').simulate('click');
+
+    assert.strictEqual(
+      wrapper.exists('.add-to-home-banner'),
+      false
+    );
+
+    done();
+  });
 });

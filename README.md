@@ -45,6 +45,16 @@ handleAddToHomescreenClick = () => {
 };
 ```
 
+## Options
+
+All options are passed as props.
+
+| Prop                     | Type     | Description                      |
+| ------------------------ | -------- | -------------------------------- |
+| `onAddToHomescreenClick` | function | function to call on banner click |
+| `title?`                 | string   | Custom title for banner          |
+| `icon?`                  | string   | Icon for banner                  |
+
 ## Contributing
 
 If you have comments, complaints, or ideas for improvements, feel free to open an issue or a pull request! If you are using or intend to use `react-add-to-homescreen`, please let me know 🙂

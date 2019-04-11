@@ -5,7 +5,7 @@
 
 Bringing your PWA app to iOS. Evidently.
 
-<img src="screenshot.png" align="right" title="Screenshot" width="200px">
+<img src="screenshot.jpeg" align="right" title="Screenshot" width="200px">
 
 ## What is it?
 

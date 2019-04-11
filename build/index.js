@@ -75,40 +75,42 @@ module.exports = (function(t) {
       };
     })();
     r(2);
-    var c = d(r(0)),
-      e = d(r(7)),
-      v = r(11),
-      i = r(10);
-    function d(t) {
+    var c = r(0),
+      e = h(c),
+      v = h(r(7)),
+      i = r(11),
+      d = r(10);
+    function h(t) {
       return t && t.__esModule ? t : { default: t };
     }
-    function h(t, a) {
+    function o(t, a) {
       if (!t)
         throw new ReferenceError(
           "this hasn't been initialised - super() hasn't been called",
         );
       return !a || ('object' != typeof a && 'function' != typeof a) ? t : a;
     }
-    var o = (function(t) {
+    var l = (function(t) {
       function a() {
         var t, r, n;
         !(function(t, a) {
           if (!(t instanceof a))
             throw new TypeError('Cannot call a class as a function');
         })(this, a);
-        for (var c = arguments.length, v = Array(c), i = 0; i < c; i++)
-          v[i] = arguments[i];
+        for (var c = arguments.length, e = Array(c), i = 0; i < c; i++)
+          e[i] = arguments[i];
         return (
-          (r = n = h(
+          (r = n = o(
             this,
             (t = a.__proto__ || Object.getPrototypeOf(a)).call.apply(
               t,
-              [this].concat(v),
+              [this].concat(e),
             ),
           )),
           (n.propTypes = {
-            onAddToHomescreenClick: e.default.func,
-            bannerText: e.default.string,
+            onAddToHomescreenClick: v.default.func,
+            title: v.default.string,
+            icon: v.default.string,
           }),
           (n.state = { bannerVisible: !0 }),
           (n.onAddToHomescreenClick = function() {
@@ -117,7 +119,7 @@ module.exports = (function(t) {
           (n.handleCloseBannerBtnClick = function() {
             return n.setState({ bannerVisible: !1 });
           }),
-          h(n, r)
+          o(n, r)
         );
       }
       return (
@@ -139,32 +141,45 @@ module.exports = (function(t) {
               (Object.setPrototypeOf
                 ? Object.setPrototypeOf(t, a)
                 : (t.__proto__ = a));
-        })(a, c.default.Component),
+        })(a, c.Component),
         n(a, [
           {
             key: 'render',
             value: function() {
-              var t =
-                this.state.bannerVisible &&
-                (0, i.isIos)() &&
-                !(0, i.isInStandaloneMode)();
-              return c.default.createElement(
+              var t = this.props,
+                a = t.title,
+                r = t.icon,
+                n =
+                  this.state.bannerVisible &&
+                  (0, d.isIos)() &&
+                  !(0, d.isInStandaloneMode)();
+              return e.default.createElement(
                 'div',
                 null,
-                t
-                  ? c.default.createElement(
+                n
+                  ? e.default.createElement(
                       'div',
                       { className: 'add-to-home-banner' },
-                      c.default.createElement(
+                      e.default.createElement(
                         'div',
-                        { className: 'add-to-home-text' },
-                        c.default.createElement(
-                          'a',
-                          { onClick: this.onAddToHomescreenClick },
-                          this.props.bannerText || 'Add to home screen',
+                        { className: 'add-to-home-content' },
+                        r
+                          ? e.default.createElement('img', {
+                              className: 'add-to-home-icon',
+                              src: r,
+                            })
+                          : null,
+                        e.default.createElement(
+                          'div',
+                          { className: 'add-to-home-text' },
+                          e.default.createElement(
+                            'a',
+                            { onClick: this.onAddToHomescreenClick },
+                            a || 'Add to home screen',
+                          ),
                         ),
                       ),
-                      c.default.createElement(v.MdClose, {
+                      e.default.createElement(i.MdClose, {
                         className: 'add-to-home-close-btn',
                         onClick: this.handleCloseBannerBtnClick,
                       }),
@@ -177,7 +192,7 @@ module.exports = (function(t) {
         a
       );
     })();
-    a.default = o;
+    a.default = l;
   },
   function(t, a, r) {
     var n = r(3);
@@ -189,7 +204,7 @@ module.exports = (function(t) {
   function(t, a, r) {
     (t.exports = r(4)(!1)).push([
       t.i,
-      '.add-to-home-banner {\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  background: white;\n  color: black;\n  text-align: left;\n  -webkit-user-select: none; }\n  .add-to-home-banner .add-to-home-text {\n    display: inline-block;\n    padding: 10px;\n    font-size: 16px; }\n  .add-to-home-banner .add-to-home-close-btn {\n    display: inline-block;\n    position: relative;\n    top: 6px;\n    right: 4px;\n    float: right;\n    font-size: 32px; }\n',
+      '.add-to-home-banner {\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  background: white;\n  color: black;\n  text-align: left;\n  -webkit-user-select: none;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .add-to-home-banner .add-to-home-content {\n    display: flex;\n    align-items: center; }\n  .add-to-home-banner .add-to-home-icon {\n    width: 32px;\n    height: 32px;\n    padding: 10px;\n    padding-right: 0; }\n  .add-to-home-banner .add-to-home-text {\n    display: inline-block;\n    font-size: 16px;\n    padding-left: 10px; }\n  .add-to-home-banner .add-to-home-close-btn {\n    display: inline-block;\n    position: relative;\n    right: 4px;\n    float: right;\n    font-size: 32px; }\n',
       '',
     ]);
   },

@@ -1,13 +1,15 @@
 import './style.scss';
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { MdClose } from 'react-icons/md';
 
 import { isIos, isInStandaloneMode } from './utils';
 
-class AddToHomescreen extends React.Component {
+class AddToHomescreen extends Component {
   propTypes = {
     onAddToHomescreenClick: PropTypes.func,
+    title: PropTypes.string,
+    icon: PropTypes.string,
   };
 
   state = {
@@ -21,6 +23,7 @@ class AddToHomescreen extends React.Component {
   handleCloseBannerBtnClick = () => this.setState({ bannerVisible: false });
 
   render() {
+    const { title, icon } = this.props;
     const { bannerVisible } = this.state;
     const shouldRender = bannerVisible && isIos() && !isInStandaloneMode();
 
@@ -28,8 +31,13 @@ class AddToHomescreen extends React.Component {
       <div>
         {shouldRender ? (
           <div className="add-to-home-banner">
-            <div className="add-to-home-text">
-              <a onClick={this.onAddToHomescreenClick}>Add to home screen</a>
+            <div className="add-to-home-content">
+              {icon ? <img className="add-to-home-icon" src={icon} /> : null}
+              <div className="add-to-home-text">
+                <a onClick={this.onAddToHomescreenClick}>
+                  {title || 'Add to home screen'}
+                </a>
+              </div>
             </div>
             <MdClose
               className="add-to-home-close-btn"

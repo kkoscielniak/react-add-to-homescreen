@@ -7,16 +7,31 @@
   text-align: left;
   -webkit-user-select: none;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .add-to-home-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .add-to-home-icon {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    padding-right: 0;
+  }
+
   .add-to-home-text {
     display: inline-block;
-    padding: 10px;
     font-size: 16px;
+    padding-left: 10px;
   }
 
   .add-to-home-close-btn {
     display: inline-block;
     position: relative;
-    top: 6px;
     right: 4px;
     float: right;
     font-size: 32px;

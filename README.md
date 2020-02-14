@@ -14,7 +14,7 @@ Bringing your PWA app to iOS. Evidently.
 ## Installation
 
 ```shell
-$ yarn react-add-to-homescreen
+$ yarn add react-add-to-homescreen
 ```
 
 ## Demo
